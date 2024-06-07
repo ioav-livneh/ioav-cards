@@ -1,0 +1,32 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    aspect-ratio: 5 / 3;
+    object-fit: cover;
+    box-shadow: 0px -22px 16px -16px hsl(0deg 0% 0% / 0.4);
+    will-change: transform;
+    background: 
+        linear-gradient(
+          #FFFFAF 0px 42px, 
+          #FB7A00 42px 43px,
+          #FFFFAF 43px 70px,
+          transparent 70px),
+        repeating-linear-gradient(
+        #FFFFAF ,
+        #FFFFAF 32px,
+        #B4B496 32px,
+        #B4B496 33px 
+    );
+    height: 100%;
+    width: 100%;
+    color: black;
+    overflow: hidden;
+    padding: 4px 20px;
+    border: 1px solid black;
+  }
+
+  .topic{
+    font-size: 1.4em;
+    text-align: right;
+  }

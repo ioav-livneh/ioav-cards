@@ -1,0 +1,38 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .wrapper {
+    width: 40vw;
+    padding: 16px;
+    background: hsl(210deg 15% 6%);
+    color: white;
+  }
+  .wrapper h2 {
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    text-align: center;
+    border-bottom: 4px dotted hsl(0deg 0% 30%);
+    animation: fadeIn 500ms both;
+    animation-delay: 200ms;
+  }
+  .cards li {
+    position: relative;
+    height: 50px;
+  }
+  .cardBtn {
+    position: relative;
+    display: flex;
+    text-align: left;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    aspect-ratio: 5 / 3;
+    border-radius: 1rem;
+  }
