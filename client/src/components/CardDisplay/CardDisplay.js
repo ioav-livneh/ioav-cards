@@ -3,12 +3,12 @@ import Card from "../Card";
 
 import styles from "./CardDisplay.module.css";
 
-function CardDisplay({ card, ...delegated }) {
+function CardDisplay({ card }) {
   return (
-    <section {...delegated}>
+    <section className={styles.display}>
       <div className={styles.wrapper}>
         {card.map((card) => (
-          <Card key={card.quote} card={card}></Card>
+          <Card key={card.quote} card={card} display={true}></Card>
         ))}
       </div>
     </section>

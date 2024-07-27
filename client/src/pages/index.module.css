@@ -1,9 +1,9 @@
 .wrapper {
     display: flex;
-    min-height: 100vh;
-    min-height: 100svh;
-    overflow: hidden;
   }
-  .display {
-    flex: 1;
+
+  @media only screen and (max-width: 1300px){
+    .wrapper{
+      flex-direction: column;
+    }
   }

@@ -1,0 +1,38 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10px;
+}
+
+.header div:first-child{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.header div:last-child{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.header a{
+    text-decoration: none;
+    transition: letter-spacing 200ms ease-out 100ms
+}
+
+.header a:hover{
+    color: inherit;
+    letter-spacing: 2px;
+}
+
+.header a:active{
+    color: inherit;
+    letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 885px){
+    .header div:last-child{
+        display: none;
+    }
+  }

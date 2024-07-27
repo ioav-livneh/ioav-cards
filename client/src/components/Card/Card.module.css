@@ -30,3 +30,31 @@
     font-size: 1.4em;
     text-align: right;
   }
+
+  .display{
+    width: 804px !important;
+  }
+
+  @media only screen and (max-width: 1300px){
+    .card{
+      width: 804px !important;
+    }
+  }
+
+  @media only screen and (max-width: 885px){
+    .card{
+      width: 600px !important;
+      background: 
+      linear-gradient(
+        #FFFFAF 0px 36px, 
+        #FB7A00 36px 37px,
+        #FFFFAF 37px 70px,
+        transparent 70px),
+      repeating-linear-gradient(
+      #FFFFAF ,
+      #FFFFAF 25px,
+      #B4B496 25px,
+      #B4B496 26px 
+  ) !important;
+    }
+  }

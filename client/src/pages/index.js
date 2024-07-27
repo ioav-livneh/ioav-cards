@@ -1,6 +1,8 @@
 import React from "react";
 import CardDisplay from "../components/CardDisplay";
 import CardBox from "../components/CardBox";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 import styles from "./index.module.css";
 
 function index() {
@@ -56,10 +58,14 @@ function index() {
   const unselectedCards = cards.filter((card) => !card.selected);
 
   return (
-    <div className={styles.wrapper}>
-      <CardDisplay className={styles.display} card={selectedCard} />
-      <CardBox cards={unselectedCards} handleRemoveCard={toggleCard} />
-    </div>
+    <>
+      <Header />
+      <div className={styles.wrapper}>
+        <CardDisplay card={selectedCard} />
+        <CardBox cards={unselectedCards} handleRemoveCard={toggleCard} />
+      </div>
+      <Footer />
+    </>
   );
 }
 

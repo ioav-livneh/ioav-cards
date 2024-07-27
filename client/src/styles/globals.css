@@ -1,7 +1,5 @@
-/*
-  Josh's Custom CSS Reset
-  https://www.joshwcomeau.com/css/custom-css-reset/
-*/
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Handlee&display=swap');
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -30,6 +28,7 @@ p, h1, h2, h3, h4, h5, h6 {
 html {
   scrollbar-gutter: stable;
   background: hsl(210deg 15% 6%);
+  /* or hsl(215, 37%, 61%); */
   color-scheme: dark;
 }
 body {
@@ -44,9 +43,6 @@ ul, ol {
 }
 * {
   margin: 0;
-}
-html, body {
-  height: 100%;
 }
 body {
   line-height: 1.5;
@@ -69,7 +65,10 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Basic theme styles */
 body {
   padding: 16px;
-  font-family: 'Gill Sans', sans-serif;
+  /* font-family: 'Gill Sans', sans-serif; */
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 table {
@@ -93,6 +92,29 @@ tr:not(:last-of-type) td {
 
 p{
   padding-top: 33px;
-  font-size: 1.5em;
+  font-size: 1.4em;
   line-height: 33px;
+}
+
+a{
+  font-weight: 600;
+  color: inherit;
+}
+
+a:hover {
+  color: #0000EE;
+  text-decoration: none;
+}
+
+a:active {
+  color: #551A8B;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 885px){
+  p{
+    font-size: 1em !important;
+    padding-top: 18px;
+    line-height: 26px;
+  }
 }

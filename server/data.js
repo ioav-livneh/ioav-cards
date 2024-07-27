@@ -141,7 +141,7 @@ exports.cards = [
     pageNumber: [213],
   },
   {
-    quote: `Maturity requires resigning oneslef to the process of aging. "It is important for the person gradually to assimilate his true age, to stop protesting his youth, pretending that there is no end to his life." There is a need to mourn one's eventual death to work it out of one's unconscious where it blocks one's emotional maturity.`,
+    quote: `Maturity requires resigning oneself to the process of aging. "It is important for the person gradually to assimilate his true age, to stop protesting his youth, pretending that there is no end to his life." There is a need to mourn one's eventual death to work it out of one's unconscious where it blocks one's emotional maturity.`,
     topic: ["Acceptance", "Death"],
     author: ["Ernest Becker"],
     book: "The Denial of Death",

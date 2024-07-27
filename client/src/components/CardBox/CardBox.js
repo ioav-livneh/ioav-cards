@@ -8,7 +8,7 @@ function CardBox({ cards, handleRemoveCard }) {
   const [highlightedIndex, setHighlightedIndex] = React.useState(null);
 
   return (
-    <>
+    <section className={styles.display}>
       <div
         className={styles.wrapper}
         onMouseLeave={() => {
@@ -16,55 +16,45 @@ function CardBox({ cards, handleRemoveCard }) {
         }}
       >
         <h2>{cards.length} Notecards</h2>
-        <ol className={styles.cards}>
-          {cards.map((card, cardIndex) => {
-            let height = 30; //or 40 or 13
+        <div className={styles.allCards}>
+          <ol>
+            {cards.map((card, cardIndex) => {
+              let height = 35;
 
-            if (cardIndex === highlightedIndex) {
-              height = 200;
-            }
-            // if (
-            //   cardIndex - 1 === highlightedIndex ||
-            //   cardIndex + 1 === highlightedIndex
-            // ) {
-            //   height = 40;
-            // }
-            // if (
-            //   cardIndex - 2 === highlightedIndex ||
-            //   cardIndex + 2 === highlightedIndex
-            // ) {
-            //   height = 35;
-            // }
-            return (
-              <li
-                key={card.quote}
-                style={{ height }}
-                onMouseEnter={() => {
-                  setHighlightedIndex(cardIndex);
-                }}
-              >
-                <motion.button
-                  layout="position"
-                  className={styles.cardBtn}
-                  onClick={() => handleRemoveCard(card)}
-                  transition={{
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 60,
-                  }}
-                  onFocus={() => {
+              if (cardIndex === highlightedIndex) {
+                height = 200;
+              }
+              return (
+                <li
+                  key={card.quote}
+                  style={{ height }}
+                  onMouseEnter={() => {
                     setHighlightedIndex(cardIndex);
                   }}
                 >
-                  <Card card={card}></Card>
-                  <VisuallyHidden>Remove {card.quote}</VisuallyHidden>
-                </motion.button>
-              </li>
-            );
-          })}
-        </ol>
+                  <motion.button
+                    layout="position"
+                    className={styles.cardBtn}
+                    onClick={() => handleRemoveCard(card)}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 60,
+                    }}
+                    onFocus={() => {
+                      setHighlightedIndex(cardIndex);
+                    }}
+                  >
+                    <Card card={card}></Card>
+                    <VisuallyHidden>Remove {card.quote}</VisuallyHidden>
+                  </motion.button>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
       </div>
-    </>
+    </section>
   );
 }
 

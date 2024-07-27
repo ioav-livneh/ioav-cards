@@ -4,12 +4,14 @@ import parse from "html-react-parser";
 
 import styles from "./Card.module.css";
 
-function Card({ card }) {
+function Card({ card, display }) {
   return (
     <motion.div
       layoutId={`card-${card.quote}`}
       draggable={false}
-      className={styles.card}
+      className={
+        display == true ? `${styles.display} ${styles.card}` : styles.card
+      }
       transition={{
         type: "spring",
         stiffness: 400,
@@ -18,7 +20,9 @@ function Card({ card }) {
     >
       <h4 className={styles.topic}>
         {card.topic.map((item, index) => (
-          <>{item} </>
+          <>
+            {item} {index + 1 == card.topic.length ? "" : "|"}{" "}
+          </>
         ))}
       </h4>
 
