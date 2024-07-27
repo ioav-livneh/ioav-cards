@@ -33,6 +33,5 @@
     border: none;
     padding: 0;
     cursor: pointer;
-    aspect-ratio: 5 / 3;
-    border-radius: 1rem;
+    aspect-ratio: 6 / 4;
   }

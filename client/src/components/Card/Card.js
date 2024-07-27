@@ -16,7 +16,12 @@ function Card({ card }) {
         damping: 60,
       }}
     >
-      <h4 className={styles.topic}>{card.topic}</h4>
+      <h4 className={styles.topic}>
+        {card.topic.map((item, index) => (
+          <>{item} </>
+        ))}
+      </h4>
+
       <p>
         {parse(card.quote)}
         <br />

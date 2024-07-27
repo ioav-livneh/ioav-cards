@@ -18,13 +18,23 @@ function CardBox({ cards, handleRemoveCard }) {
         <h2>{cards.length} Notecards</h2>
         <ol className={styles.cards}>
           {cards.map((card, cardIndex) => {
-            const reverseCardIndex = cards.length - cardIndex - 1;
-
-            let height = Math.max(60 - reverseCardIndex * 5, 35);
+            let height = 30; //or 40 or 13
 
             if (cardIndex === highlightedIndex) {
-              height = 120;
+              height = 200;
             }
+            // if (
+            //   cardIndex - 1 === highlightedIndex ||
+            //   cardIndex + 1 === highlightedIndex
+            // ) {
+            //   height = 40;
+            // }
+            // if (
+            //   cardIndex - 2 === highlightedIndex ||
+            //   cardIndex + 2 === highlightedIndex
+            // ) {
+            //   height = 35;
+            // }
             return (
               <li
                 key={card.quote}
