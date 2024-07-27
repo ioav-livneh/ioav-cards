@@ -154,13 +154,13 @@ exports.cards = [
     book: "The Denial of Death",
     pageNumber: [258, 259],
   },
-  {
-    quote: ``,
-    topic: [""],
-    author: ["Ernest Becker"],
-    book: "The Denial of Death",
-    pageNumber: [],
-  },
+  // {
+  //   quote: ``,
+  //   topic: [""],
+  //   author: ["Ernest Becker"],
+  //   book: "The Denial of Death",
+  //   pageNumber: [],
+  // },
 ];
 
 exports.books = [
