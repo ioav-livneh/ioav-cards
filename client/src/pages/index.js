@@ -12,7 +12,7 @@ function index() {
     quote:
       "Welcome! This is my digital commonplace book. If you haven't heard the term before, it's an old-school note-taking method for readers to remember what they've read or for writer's to collect material. I am borrowing this card style of commonplace book from Ryan Holiday's <a href='https://www.youtube.com/watch?v=gT1EExZkzMM'>notecard system</a>, which he originally learned from Robert Greene. To get started, click on any of my notecards on the right. They are organized by topic." +
       "<br><br>" +
-      "Click on this card to flip it around. Every card can be flipped to see my synthesis of information in my own words.<br>This website uses the MERN tech stack (Mongo, Express, React, Node), and runs on Next.js and is deployed using Vercel. I used Framer Motion for animations. I got visual inspiration from <a href='https://www.joyofreact.com/'>Josh Comeau's course</a>.",
+      "This website uses the MERN tech stack (Mongo, Express, React, Node), and runs on Next.js and is deployed using Vercel. I used Framer Motion for animations. I got visual inspiration from <a href='https://www.joyofreact.com/'>Josh Comeau's course</a>. I also included a library/antilibrary tab on this site inspired by <a href='https://maggieappleton.com/library'>Maggie Appleton</a> to keep a record of books I've read and want to read.",
     author: ["Ioav Livneh"],
     topic: ["About"],
     book: "",
