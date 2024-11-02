@@ -2,7 +2,6 @@ import React from "react";
 import CardDisplay from "../components/CardDisplay";
 import CardBox from "../components/CardBox";
 import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 import styles from "./index.module.css";
 
 function index() {
@@ -64,7 +63,6 @@ function index() {
         <CardDisplay card={selectedCard} />
         <CardBox cards={unselectedCards} handleRemoveCard={toggleCard} />
       </div>
-      <Footer />
     </>
   );
 }

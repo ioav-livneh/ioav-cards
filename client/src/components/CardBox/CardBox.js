@@ -19,7 +19,10 @@ function CardBox({ cards, handleRemoveCard }) {
         <div className={styles.allCards}>
           <ol>
             {cards.map((card, cardIndex) => {
+              // const reverseCardIndex = cards.length - cardIndex - 1;
               let height = 35;
+
+              // let height = Math.max(50 - reverseCardIndex * 5, 5);
 
               if (cardIndex === highlightedIndex) {
                 height = 200;
