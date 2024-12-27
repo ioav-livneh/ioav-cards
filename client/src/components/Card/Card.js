@@ -21,7 +21,7 @@ function Card({ card, display }) {
       <h4 className={styles.topic}>
         {card.topic.map((item, index) => (
           <>
-            {item} {index + 1 == card.topic.length ? "" : "|"}{" "}
+            {item} {index + 1 == card.topic.length ? "" : ">"}{" "}
           </>
         ))}
       </h4>

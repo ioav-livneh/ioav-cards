@@ -38,9 +38,24 @@
     padding: 0;
     cursor: pointer;
     aspect-ratio: 6 / 4;
+    width: inherit;
   }
 
   .display{
-    width: 40%;
+    width: 50%;
     min-height: 500vh;
+  }
+
+  @media only screen and (max-width: 1300px){
+    .display{
+      width: 100%;
+      padding-top: 65vh;
+    }
+    .wrapper, .allCards, .allCards ol, .allCards li{
+     width: inherit;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+    }
+
   }

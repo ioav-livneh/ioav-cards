@@ -14,9 +14,9 @@
           transparent 70px),
         repeating-linear-gradient(
         #FFFFAF ,
-        #FFFFAF 32px,
-        #B4B496 32px,
-        #B4B496 33px 
+        #FFFFAF 26px,
+        #B4B496 26px,
+        #B4B496 27px 
     );
     height: 100%;
     width: 100%;
@@ -31,17 +31,7 @@
     text-align: right;
   }
 
-  .display{
-    width: 804px !important;
-  }
-
   @media only screen and (max-width: 1300px){
-    .card{
-      width: 804px !important;
-    }
-  }
-
-  @media only screen and (max-width: 885px){
     .card{
       width: 600px !important;
       background: 

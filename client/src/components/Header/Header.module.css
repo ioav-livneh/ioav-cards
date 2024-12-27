@@ -2,11 +2,13 @@
     display: flex;
     justify-content: space-between;
     padding: 25px 10px;
-    position: sticky;
+    position: fixed;
     top: 0;
-    background: hsla(216, 16%, 6%, 0.8);
+    background: hsla(216, 16%, 6%, 1.0);
     z-index: 10;
-}
+    width: 100%;
+    box-shadow: 0px 1px 10px 10px hsla(216, 16%, 6%, 1.0);
+  }
 
 .header div:first-child{
     width: 250px;
@@ -59,5 +61,12 @@
 @media only screen and (max-width: 885px){
     .header div:last-child{
         display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1300px){
+    .header{
+      padding-bottom: 65vh;
+      box-shadow: 0px 1px 10px 10px hsla(216, 16%, 6%, 1.0);
     }
   }

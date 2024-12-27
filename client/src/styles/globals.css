@@ -89,9 +89,9 @@ tr:not(:last-of-type) td {
 }
 
 p{
-  padding-top: 33px;
-  font-size: 1.4em;
-  line-height: 33px;
+  padding-top: 20px;
+  font-size: 1.15vw;
+  line-height: 27px;
 }
 
 a{
@@ -100,7 +100,7 @@ a{
 }
 
 a:hover {
-  color: #0000EE;
+  color: #FB7A00;
   text-decoration: none;
 }
 
@@ -109,7 +109,7 @@ a:active {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 885px){
+@media only screen and (max-width: 1300px){
   p{
     font-size: 1em !important;
     padding-top: 18px;
