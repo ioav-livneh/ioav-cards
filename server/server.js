@@ -1,13 +1,13 @@
-require("dotenv").config();
+// require("dotenv").config();
 const express = require("express");
-const cors = require("cors");
-const { MongoClient, ServerApiVersion } = require("mongodb");
+// const cors = require("cors");
+// const { MongoClient, ServerApiVersion } = require("mongodb");
 
 // const cards = require("./cards.json");
 const app = express();
 const PORT = 8080;
 
-app.use(cors());
+// app.use(cors());
 
 app.use("/", (req, res) => {
   res.send("server is running.");
