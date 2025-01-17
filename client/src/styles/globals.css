@@ -60,6 +60,30 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+
+/* Additional Colors
+
+	1.	Headings: #E0E0E0 (light gray to provide contrast with white body text without being too harsh).
+	2.	Secondary Text/Muted Text: #A3A3A3 (medium gray for less prominent text, like captions or footers).
+	3.	Button Background: #1E2227 (slightly lighter neutral to stand out from the dark background without overwhelming).
+	4.	Button Hover/Call-to-Action Elements: #FB4D00 (a slightly deeper orange than your hover color for emphasis).
+	5.	Highlights/Active States: #FFD700 (gold for subtle highlighting or active elements).
+
+Optional Accent Colors (for variety)
+
+	1.	Secondary Accent: #5BCEFA (bright sky blue, complementary to orange and adds a cool tone).
+	2.	Success/Positive Feedback: #41D3BD (soft teal for confirmations or positive states).
+	3.	Error/Negative Feedback: #D72638 (vivid red for errors or warnings).
+
+Example Usage
+
+	•	Headings: #E0E0E0 for a clean, modern look.
+	•	Secondary Text: Use #A3A3A3 for hints or notes.
+	•	Buttons: Default to #1E2227 with text in white, and change to #FB4D00 on hover.
+	•	Active Links or Highlights: Use #FFD700 to guide attention.
+	•	Special Notices/Positive Elements: Accent with #5BCEFA or #41D3BD. */
+
+
 /* Basic theme styles */
 body {
   padding: 0px 16px;
@@ -88,12 +112,6 @@ tr:not(:last-of-type) td {
   border-bottom: 1px solid hsl(0deg 0% 50%);
 }
 
-p{
-  padding-top: 20px;
-  font-size: 1.15vw;
-  line-height: 27px;
-}
-
 a{
   font-weight: 600;
   color: inherit;
@@ -105,7 +123,6 @@ a:hover {
 }
 
 a:active {
-  color: #551A8B;
   text-decoration: none;
 }
 

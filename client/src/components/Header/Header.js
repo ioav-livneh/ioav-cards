@@ -11,9 +11,9 @@ function Header() {
         </a>
       </div>
       <div className={styles.links}>
-        <a href="/library">
+        {/* <a href="/library">
           <h3>Library / Antilibrary</h3>
-        </a>
+        </a> */}
       </div>
     </header>
   );

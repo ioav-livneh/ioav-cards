@@ -52,7 +52,7 @@
       padding-top: 65vh;
     }
     .wrapper, .allCards, .allCards ol, .allCards li{
-     width: inherit;
+     width: 100%;
      display: flex;
      flex-direction: column;
      align-items: center;

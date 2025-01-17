@@ -8,27 +8,44 @@
     will-change: transform;
     background: 
         linear-gradient(
-          #FFFFAF 0px 42px, 
-          #FB7A00 42px 43px,
-          #FFFFAF 43px 70px,
-          transparent 70px),
+          #FFFFAF 0px 3.2vw, 
+          #FB7A00 3.2vw calc(3.2vw + 1px),
+          #FFFFAF calc(3.2vw + 1px) 4vw,
+          transparent 4vw),
         repeating-linear-gradient(
         #FFFFAF ,
-        #FFFFAF 26px,
-        #B4B496 26px,
-        #B4B496 27px 
+        #FFFFAF 1.8vw, 
+        #B4B496 1.8vw,
+        #B4B496 calc(1.8vw + 1px) 
     );
     height: 100%;
     width: 100%;
     color: black;
     overflow: hidden;
-    padding: 4px 20px;
+    padding: 0px 20px;
     border: 1px solid black;
   }
 
+  .card p{
+    padding-top: 1.15vw;
+    font-size: 1.15vw;
+    line-height: calc(1.8vw + 1px) ; 
+  }
+
   .topic{
-    font-size: 1.4em;
+    padding-top: 0.4vw;
+    font-size: 1.7vw;
     text-align: right;
+  }
+
+  .divider{
+    padding: 0px 20px;
+    border: 1px solid black;
+    color: black;
+    box-shadow: 0px -13px 16px -16px hsl(0deg 0% 0% / 0.4);
+    background-color: white;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
   }
 
   @media only screen and (max-width: 1300px){
@@ -46,5 +63,14 @@
       #B4B496 25px,
       #B4B496 26px 
   ) !important;
+    }
+    .card p{
+      padding-top: 16px;
+      font-size: 16px;
+      line-height: 26px ; 
+    }
+    .topic{
+      padding-top: 2px;
+      font-size: 24px;
     }
   }
