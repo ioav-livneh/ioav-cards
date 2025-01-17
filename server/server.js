@@ -13,93 +13,97 @@ app.use("/", (req, res) => {
   res.send("server is running.");
 });
 
-const uri = process.env.MONGO_URI;
-
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  },
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
 });
 
-let db;
+// const uri = process.env.MONGO_URI;
 
-async function startServer() {
-  try {
-    await client.connect();
-    db = client.db("Commonplace");
-    console.log("Successfully connected to MongoDB!");
+// const client = new MongoClient(uri, {
+//   serverApi: {
+//     version: ServerApiVersion.v1,
+//     strict: true,
+//     deprecationErrors: true,
+//   },
+// });
 
-    const cardsCollection = db.collection("cards");
-    const booksCollection = db.collection("books");
+// let db;
 
-    app.get("/api/cards", async (req, res) => {
-      try {
-        const agg = [
-          {
-            $match: {
-              visible: true,
-            },
-          },
-          {
-            $sort: {
-              topic: 1,
-            },
-          },
-        ];
-        const cards = await cardsCollection;
-        const cursor = cards.aggregate(agg);
-        const result = await cursor.toArray();
-        res.json(result);
-      } catch (error) {
-        // res.json(cards);
-        console.error("Error fetching cards:", error);
-        res.status(500).send("Internal Server Error");
-      }
-    });
+// async function startServer() {
+//   try {
+//     await client.connect();
+//     db = client.db("Commonplace");
+//     console.log("Successfully connected to MongoDB!");
 
-    app.get("/api/books", async (req, res) => {
-      try {
-        const agg = [
-          {
-            $sort: {
-              dateAdded: 1,
-            },
-          },
-        ];
-        const books = await booksCollection;
-        const cursor = books.aggregate(agg);
-        const result = await cursor.toArray();
-        res.json(result);
-      } catch (error) {
-        console.error("Error fetching cards:", error);
-        res.status(500).send("Internal Server Error");
-      }
-    });
+//     const cardsCollection = db.collection("cards");
+//     const booksCollection = db.collection("books");
 
-    app.listen(PORT, () => {
-      console.log(`Server started on port ${PORT}`);
-    });
-  } catch (error) {
-    console.error("Error connecting to MongoDB:", error);
-    process.exit(1); // Exit process if connection fails
-  }
-}
+//     app.get("/api/cards", async (req, res) => {
+//       try {
+//         const agg = [
+//           {
+//             $match: {
+//               visible: true,
+//             },
+//           },
+//           {
+//             $sort: {
+//               topic: 1,
+//             },
+//           },
+//         ];
+//         const cards = await cardsCollection;
+//         const cursor = cards.aggregate(agg);
+//         const result = await cursor.toArray();
+//         res.json(result);
+//       } catch (error) {
+//         // res.json(cards);
+//         console.error("Error fetching cards:", error);
+//         res.status(500).send("Internal Server Error");
+//       }
+//     });
 
-startServer();
+//     app.get("/api/books", async (req, res) => {
+//       try {
+//         const agg = [
+//           {
+//             $sort: {
+//               dateAdded: 1,
+//             },
+//           },
+//         ];
+//         const books = await booksCollection;
+//         const cursor = books.aggregate(agg);
+//         const result = await cursor.toArray();
+//         res.json(result);
+//       } catch (error) {
+//         console.error("Error fetching cards:", error);
+//         res.status(500).send("Internal Server Error");
+//       }
+//     });
 
-// Handle graceful shutdown
-process.on("SIGINT", async () => {
-  console.log("Received SIGINT. Closing MongoDB connection...");
-  await client.close();
-  console.log("MongoDB connection closed.");
-  process.exit(0); // Exit process
-});
+//     app.listen(PORT, () => {
+//       console.log(`Server started on port ${PORT}`);
+//     });
+//   } catch (error) {
+//     console.error("Error connecting to MongoDB:", error);
+//     process.exit(1); // Exit process if connection fails
+//   }
+// }
 
-process.on("SIGTERM", async () => {
-  console.log("Received SIGTERM. Closing MongoDB connection...");
-  await client.close();
-  console.log("MongoDB connection closed.");
-  process.exit(0); // Exit process
-});
+// startServer();
+
+// // Handle graceful shutdown
+// process.on("SIGINT", async () => {
+//   console.log("Received SIGINT. Closing MongoDB connection...");
+//   await client.close();
+//   console.log("MongoDB connection closed.");
+//   process.exit(0); // Exit process
+// });
+
+// process.on("SIGTERM", async () => {
+//   console.log("Received SIGTERM. Closing MongoDB connection...");
+//   await client.close();
+//   console.log("MongoDB connection closed.");
+//   process.exit(0); // Exit process
+// });
