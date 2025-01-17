@@ -9,6 +9,10 @@ const PORT = 8080;
 
 app.use(cors());
 
+app.use("/", (req, res) => {
+  res.send("server is running.");
+});
+
 const uri = process.env.MONGO_URI;
 
 const client = new MongoClient(uri, {
