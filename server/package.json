@@ -14,7 +14,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.19.2",
-    "vercel": "^28.18.5"
+    "vercel": "^28.18.5",
+    "mongodb": "^6.8.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.2"
