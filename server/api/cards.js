@@ -11,6 +11,8 @@ const client = new MongoClient(uri, {
 });
 
 let db;
+console.log("Starting function...");
+console.log("URI:", process.env.MONGO_URI);
 
 // Helper to connect to the database
 async function getDb() {
