@@ -3,6 +3,7 @@ import CardDisplay from "../components/CardDisplay";
 import CardBox from "../components/CardBox";
 import Header from "../components/Header/Header";
 import styles from "./index.module.css";
+import { Analytics } from "@vercel/analytics/react"
 
 //const API_URL = process.env.REACT_APP_API_URL;
 
