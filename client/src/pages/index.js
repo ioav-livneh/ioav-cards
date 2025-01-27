@@ -61,6 +61,7 @@ function index() {
 
   return (
     <>
+      <Analytics />
       <Header />
       <div className={styles.wrapper}>
         <CardDisplay card={selectedCard} />
